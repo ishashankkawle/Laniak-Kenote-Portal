@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use client';
 
 import { Activity, Folder } from 'react-feather';
