@@ -1,0 +1,112 @@
+.banner
+{
+    overflow: hidden;
+}
+.bannerComps
+{
+    height: 500px;
+    text-align: center;
+    /* transform: skew(-5deg , -5deg); */
+}
+
+
+.introHeading
+{
+    text-align: center;
+    color: var(--light-highlight-1);
+}
+.featureNum
+{
+    position: absolute;
+    right:0px;
+    font-size:10em;
+    font-family: fantasy;
+    color:grey;
+    opacity: 0.1;
+}
+.featureImg
+{
+    width: 520px;
+    height: 400px;
+    position: relative; 
+    top: -20%;
+}
+.featureText
+{
+    width:50%
+}
+.featureHeading
+{
+    color: var(--light-highlight-2);
+}
+.featureBox
+{
+    height:350px;
+    z-index: 1;
+    margin-bottom: 105px;
+}
+@media only screen and (max-width:1100px)
+{
+    .featureImg
+    {
+        display: none;
+    }
+    .featureText
+    {
+        width:100%;
+    }
+    .featureBox
+    {
+        height:220px;
+        margin-bottom:50px;
+    }
+    .featureNum
+    {
+        right: 105px;
+    }
+}
+.controBall
+{
+    border-radius: 49%;
+    border: 1px solid white;
+    width: 26%;
+    height: 100%;
+}
+.controCount
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.controParent
+{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    padding: 6%;
+    padding-bottom: 12% !important;
+    background: var(--light-text-primary) !important;
+    color: var(--light-bg-primary);
+    margin-bottom: 5%;
+}
+
+.controBox
+{
+    text-align: center;
+}
+
+
+.link-sec
+{
+    text-align: center;
+}
+.footerLinkSec
+{
+    position: relative;
+}
+.footerProfileLink
+{
+    text-decoration: none;
+    color: var(--light-highlight-2);
+    margin: 3%;
+}

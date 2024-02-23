@@ -1,0 +1,11 @@
+.navBrand
+{
+    background: -webkit-linear-gradient(left , var(--light-highlight-1), var(--light-highlight-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+.navTab
+{
+    cursor: pointer;
+}

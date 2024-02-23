@@ -1,0 +1,30 @@
+.cat-banner-link
+{
+    font-size: 14px;
+}
+.catBannerTitle
+{
+    font-weight: 700;
+    font-size: 2rem;
+}
+.cat-updates-box
+{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.catCard
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    margin-left:2% !important;
+    margin-right:2% !important;
+    background-color: var(--light-bg-secondary);
+    border-left: 6px solid var(--light-bg-secondary);
+}
+
+.catCard:hover
+{
+    border-left: 6px solid var(--light-highlight-1);
+    cursor: pointer;
+}

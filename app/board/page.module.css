@@ -1,0 +1,29 @@
+.boardPageListItem
+{
+    border-left: 3px solid var(--light-bg-secondary);
+}
+.boardPageListItem:hover
+{
+    cursor: pointer;
+    border-left: 3px solid var(--light-highlight-2);
+}
+.boardPageList
+{
+    font-size: small;
+    background-color: var(--light-bg-secondary);
+    height: 83%;
+    overflow-y: auto;
+    position: fixed;
+}
+
+.boardDisplay {
+    background-color: var(--light-bg-secondary);
+}
+.boardDisplayTitle {
+    font-size: 2rem;
+}
+.boardDisplayAuthor
+{
+    color: var(--light-text-ternary);
+    font-size: small;
+}
