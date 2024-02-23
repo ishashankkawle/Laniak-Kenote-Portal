@@ -31,7 +31,7 @@ export default function Home() {
 
           <div className={`${styles.bannerComps}`}>
             <h1 className="display-4 mb-3">
-              <Image src={banner} width={300} height={300} alt='logo' /><br/><b>Laniak</b>
+              <Image src={banner} width={300} height={300} alt='logo' /><br/><b>Keynote</b>
             </h1>
             <blockquote className="blockquote">
               Learn and evolve through the super cluster of tech-science
