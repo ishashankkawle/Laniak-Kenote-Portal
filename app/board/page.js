@@ -1,10 +1,28 @@
 /* eslint-disable */
 'use client';
 
+import { useState } from 'react';
 import styles from './page.module.css'
 import { useRouter } from 'next/navigation';
 
 export default function board() {
+
+    let [isLoading, setLoadingFlag] = useState(true)
+    let [data , setData] = useState([])
+    
+    const initialize = async () => {
+        let url = "https://gitlab.com/api/v4/projects/8300723/repository/tree?path=_DIR_FILES&recursive=true"
+        let headers = { "PRIVATE-TOKEN": "glpat-xG6KXqNybtRAVdhd1pyM" }
+        let data = await httpGet(url, headers)
+        setLoadingFlag(false)
+        setData(data)
+    }
+
+    useEffect(() => {
+        console.log("isLoading : " + isLoading)
+        initialize()
+    }, [])
+
 
     const rouer = useRouter();
 

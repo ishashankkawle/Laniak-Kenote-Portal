@@ -1,0 +1,26 @@
+.mainLoader
+{
+    position: fixed;
+    z-index: 1;
+    width: 82%;
+    text-align: center;
+    top: 44%
+}
+.mainLoaderFull
+{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    top: 44%
+}
+.mainLoaderGif
+{
+    width: 25%;
+    height: 25%;
+}
+.mainLoaderGifIndependent
+{
+    width: 3%;
+    height: 3%;
+}

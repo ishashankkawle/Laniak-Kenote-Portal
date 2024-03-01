@@ -28,3 +28,9 @@
     border-left: 6px solid var(--light-highlight-1);
     cursor: pointer;
 }
+
+.catFolderLogo
+{
+    width: 45%;
+    height: 50%;
+}
