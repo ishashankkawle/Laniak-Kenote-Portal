@@ -54,7 +54,7 @@ export default function catalog() {
 
     let catalogList = []
     
-    catalogList = items.map((item) => (<div key={item.name} className={`${styles.catCard} col-sm-5 col-md-3 col-lg-3 ms-auto me-auto shadow`} onClick={() => handleClick("/board")}>
+    catalogList = items.map((item) => (<div key={item.name} className={`${styles.catCard} col-sm-5 col-md-3 col-lg-3 ms-auto me-auto shadow`} onClick={() => handleClick("/board?topic=" + item.name)}>
     <div className="row">
       <div className="col-3 d-flex align-items-center justify-content-center"><Image alt={item.name} className={`${styles.catFolderLogo}`} src={item.url} width={50} height={45} priority={false} /></div>
       <div className="col-9 content p-4">
