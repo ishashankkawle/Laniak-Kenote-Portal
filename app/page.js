@@ -33,9 +33,9 @@ export default function Home() {
             <h1 className="display-4 mb-3">
               <Image src={banner} width={300} height={300} alt='logo' /><br/><b>Keynote</b>
             </h1>
-            <blockquote className="blockquote">
+            <h3 className="blockquote">
               Learn and evolve through the super cluster of tech-science
-            </blockquote>
+            </h3>
             Keynote is knowledge sharing hub here you can learn <br /> through the experices shared by community via docs to get optimum <br /> solution for your problem
           </div>
         </div>

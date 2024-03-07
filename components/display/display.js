@@ -58,7 +58,7 @@ export default function display({ currentPage }) {
                     <div className={`${styles.displayAuthor}`}>
                         <span>{displayValues.author}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>{displayValues.date}</span>
                     </div>
-                    <div className="mt-4" dangerouslySetInnerHTML={displayValues.content}>
+                    <div className={`${styles.displayFile} mt-4`}  dangerouslySetInnerHTML={displayValues.content}>
                         
                     </div>
                 </div>
