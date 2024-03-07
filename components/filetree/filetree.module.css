@@ -1,0 +1,25 @@
+.fileListItem
+{
+    border-left: 3px solid var(--light-bg-secondary);
+    padding-left: 2%;
+}
+.fileListItem:hover
+{
+    cursor: pointer;
+    border-left: 3px solid var(--light-highlight-2);
+    background-color: var(--light-bg-ternary);
+}
+.fileListBlock
+{
+    list-style-type: none;
+    font-size: small;
+    background-color: var(--light-bg-secondary);
+    height: 83%;
+    overflow-y: auto;
+    overflow-x: auto;
+    position: fixed;
+}
+.fileList
+{
+    cursor: pointer;
+}

@@ -1,0 +1,11 @@
+.display {
+    background-color: var(--light-bg-secondary);
+}
+.displayTitle {
+    font-size: 2rem;
+}
+.displayAuthor
+{
+    color: var(--light-text-ternary);
+    font-size: small;
+}
