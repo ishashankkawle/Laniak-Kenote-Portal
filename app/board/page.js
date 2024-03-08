@@ -13,11 +13,12 @@ import { getFullScreenLoader } from '@/components/preloader/preloader';
 
 export default function board() {
 
-    let [isLoading, setLoadingFlag] = useState(true)
-    let [data, setData] = useState([])
-    let [page, openPage] = useState();
     const query = useSearchParams();
     let dir = query.get('topic')
+    let [isLoading, setLoadingFlag] = useState(true)
+    let [data, setData] = useState([])
+    let [page, openPage] = useState(dir + "/" + decodeURIComponent(query.get('page')));
+    console.log(page)
 
 
     const initialize = async () => {
@@ -33,8 +34,6 @@ export default function board() {
         initialize()
     }, [])
 
-
-    console.log(page)
 
     if (isLoading) 
     {

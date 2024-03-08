@@ -12,12 +12,15 @@ import { marked } from 'marked';
 
 export default function display({ currentPage }) {
 
+    let page = currentPage.split("/")
+    page = page.slice(-1)[0]
+    console.log(page)
     let [isLoading, setLoadingFlag] = useState(true)
     let [displayValues, setDisplayValues] = useState({ "title": "", "author" : "", "date": "", "content": "" })
 
 
     useEffect(() => {
-        if (currentPage != undefined) {
+        if (page != 'null') {
             initialize()
         }
     }, [currentPage])
@@ -25,7 +28,6 @@ export default function display({ currentPage }) {
 
     const initialize = async () => {
         setLoadingFlag(true)
-        console.log("Curent Page : " + currentPage)
         let headers = { "PRIVATE-TOKEN": "glpat-xG6KXqNybtRAVdhd1pyM" }
         let url = "https://gitlab.com/api/v4/projects/8300723/repository/files/" + encodeURIComponent(currentPage) + "/blame?ref=master"
         let data = await httpGet(url, headers)
@@ -42,7 +44,7 @@ export default function display({ currentPage }) {
         setLoadingFlag(false)
     }
 
-    if (currentPage != undefined) 
+    if (page != 'null') 
     {
 
         if (isLoading) {
