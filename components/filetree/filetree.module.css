@@ -14,7 +14,7 @@
     list-style-type: none;
     font-size: small;
     background-color: var(--light-bg-secondary);
-    height: 83%;
+    max-height: 83%;
     overflow-y: auto;
     overflow-x: auto;
     position: fixed;
@@ -22,4 +22,15 @@
 .fileList
 {
     cursor: pointer;
+}
+.fileListToggleBtn
+{
+    color: var(--light-text-ternary);
+    font-weight: lighter;
+    stroke-width: 1px;
+    background-color: var(--light-bg-primary);
+}
+.fileListToggleBtnRotate{
+    transform: rotate(-200deg);
+    transition: 6s;
 }

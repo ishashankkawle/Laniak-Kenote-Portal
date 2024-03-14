@@ -1,10 +1,11 @@
 /* eslint-disable */
 'use client';
 
-import { ChevronDown } from 'react-feather';
+import { ArrowDownCircle, ArrowLeftCircle, ArrowUpCircle, ChevronDown } from 'react-feather';
 import styles from './filetree.module.css'
+import { useState } from 'react';
 
-export default function filetree({listdata , topic , openPage}) {
+export default function filetree({ listdata, topic, openPage }) {
 
     let data = listdata
     let pathArray = []
@@ -28,47 +29,60 @@ export default function filetree({listdata , topic , openPage}) {
 
     }
 
+    let toggleListDisplay = () => {
+        let element = document.getElementById("pageTree")
+        let toggler = document.getElementById("pageTreeToggler")
+        let classList = element.getAttribute('class').split(" ")
+        if (classList.includes("d-block")) {
+            element.classList.remove("d-block")
+            element.classList.add("d-none")
+            element.classList.add("d-none")
+            toggler.style.transform = 'rotate(180deg)';
+        }
+        else {
+            element.classList.remove("d-none")
+            element.classList.add("d-block")
+            toggler.style.transform = 'rotate(0deg)';
+        }
+        toggler.style.transition = '0.4s';
+    }
+
     let openBoard = (event, data) => {
         event.stopPropagation()
         openPage(topic + "/" + data)
     }
 
-    const createNestedDOM = (path) => 
-    {
+    const createNestedDOM = (path) => {
 
-       //console.log("path : " + path)
+        //console.log("path : " + path)
         let array = data.filter(child => child.path.startsWith(path + '/'))
-        
-    
+
+
         //console.log("array : " + JSON.stringify(array))
         //console.log("current pathArray : " + JSON.stringify(pathArray))
 
         // Loop through array elements
-        let element = array.map((item) => 
-        {   
+        let element = array.map((item) => {
             //console.log( " Current item : " + JSON.stringify(item) )
-            
-            if(!pathArray.includes(item.path))
-            {
-                pathArray.push(item.path) 
 
-                if (item.type === "tree") 
-                {
-                    
+            if (!pathArray.includes(item.path)) {
+                pathArray.push(item.path)
+
+                if (item.type === "tree") {
+
                     //console.log("pushing UL path  : " + item.path)            
                     return (<ul key={item.path} onClick={toggleDisplay} className={`${styles.fileList} my-2 py-2 px-0 d-none`}>
-                            <div className='d-flex justify-content-between'><span>{item.name}</span> <ChevronDown className='align-self-center' size={16} /></div>
-                            {createNestedDOM(item.path)}
-                        </ul>);
+                        <div className='d-flex justify-content-between'><span>{item.name}</span> <ChevronDown className='align-self-center' size={16} /></div>
+                        {createNestedDOM(item.path)}
+                    </ul>);
                 }
-                else
-                { 
-                    
+                else {
+
                     //console.log("pushing LI path : " + item.path)
                     return (<li key={item.path} value={item.path} onClick={(e) => { openBoard(e, item.path) }} className={`${styles.fileListItem} d-none my-2 py-2`}>
-                                {item.name} 
-                            </li>)
-                    
+                        {item.name}
+                    </li>)
+
                 }
             }
         });
@@ -79,58 +93,53 @@ export default function filetree({listdata , topic , openPage}) {
     // END HELPER FUNCTION TO TRAVERSE INSIDE
     //-------------------------------------------------------------
 
-    const createDirTree = () => 
-    {
-        rootNode.forEach((item) => 
-        {
+    const createDirTree = () => {
+        rootNode.forEach((item) => {
             let node = undefined;
             //console.log("item from parent : " + JSON.stringify(item))
             pathArray.push(item.path)
-            if (item.type === "tree") 
-            {
-                node = ( <ul key={item.path} onClick={toggleDisplay} className={`${styles.fileList} my-2 py-2 px-1`}>
-                            <div className='d-flex justify-content-between'><span>{item.name}</span> <ChevronDown className='align-self-center' size={16} /></div>
-                            {createNestedDOM(item.path)}
-                        </ul>)
-            } 
-            else 
-            {
-                node =   (<li key={item.path} value={item.path} onClick={(e) => { openBoard(e, item.path) }} className={`${styles.fileListItem} my-2 py-2`}>
-                            {item.name}
-                        </li>)
+            if (item.type === "tree") {
+                node = (<ul key={item.path} onClick={toggleDisplay} className={`${styles.fileList} my-2 py-2 px-1`}>
+                    <div className='d-flex justify-content-between'><span>{item.name}</span> <ChevronDown className='align-self-center' size={16} /></div>
+                    {createNestedDOM(item.path)}
+                </ul>)
+            }
+            else {
+                node = (<li key={item.path} value={item.path} onClick={(e) => { openBoard(e, item.path) }} className={`${styles.fileListItem} my-2 py-2`}>
+                    {item.name}
+                </li>)
             }
 
             //console.log(node)
             nested.push(node)
-            
+
         })
     }
 
     //console.log("inputArray from outside" + JSON.stringify(data))
 
-    if (data != undefined) 
-    {
-        for(let index=0; index < data.length; index++)
-        {
+    if (data != undefined) {
+        for (let index = 0; index < data.length; index++) {
             let obj = data[index]
             let arrPath = obj.path.split("/")
-            if(arrPath.length == 1)
-            {
+            if (arrPath.length == 1) {
                 rootNode.push(obj)
             }
         }
-    
+
         //console.log("RootNodes : " + rootNode)
         createDirTree()
     }
-   
+
 
     return (
-
-        <ul id="pageTree" className={`${styles.fileListBlock} shadow-sm col-2 px-2`}>
-
-            {nested}
-
-        </ul>
+        <div className={`${styles.fileListBlock} col-sm-12 col-md-3 col-xl-2 px-2 shadow-sm`}>
+            <ArrowUpCircle id="pageTreeToggler" size={20} className={`${styles.fileListToggleBtn} mx-2 my-2`} onClick={toggleListDisplay} />
+            <div id="pageTree" className='d-block'>
+                <ul className='p-0' style={{'listStyleType' : 'none'}}>
+                    {nested}
+                </ul>
+            </div>
+        </div>
     )
 }

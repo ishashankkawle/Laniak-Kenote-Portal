@@ -53,7 +53,7 @@ export default function display({ currentPage }) {
         else {
             return (
 
-                <div className={`${styles.display} px-5 py-3`}>
+                <div className={`${styles.display} ms-1 px-5 py-3`}>
                     <div className={`${styles.displayTitle}`}>
                         {displayValues.title}
                     </div>
