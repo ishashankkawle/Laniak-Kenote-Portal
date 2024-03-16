@@ -22,6 +22,8 @@
 .fileList
 {
     cursor: pointer;
+    border: 0.5px solid lightgray;
+    border-radius: 5px;
 }
 .fileListToggleBtn
 {
