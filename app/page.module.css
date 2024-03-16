@@ -68,8 +68,8 @@
 {
     border-radius: 49%;
     border: 1px solid white;
-    width: 26%;
-    height: 100%;
+    width: 100px;
+    height: 100px;
 }
 .controCount
 {
@@ -83,7 +83,6 @@
     top: 0;
     bottom: 0;
     padding: 6%;
-    padding-bottom: 12% !important;
     background: var(--light-text-primary) !important;
     color: var(--light-bg-primary);
     margin-bottom: 5%;

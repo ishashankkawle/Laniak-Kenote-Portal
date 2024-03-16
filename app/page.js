@@ -4,16 +4,16 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import { Heart, Share2, Upload } from 'react-feather'
 import { useState } from 'react';
-import banner from  '../public/logoDesign.png';
-import feature1 from  '../public/feature/laniak-feature-1.png';
-import feature2 from  '../public/feature/laniak-feature-2_v1.png';
-import feature3 from  '../public/feature/laniak-feature-3_v1.png';
+import banner from '../public/logoDesign.png';
+import feature1 from '../public/feature/laniak-feature-1.png';
+import feature2 from '../public/feature/laniak-feature-2_v1.png';
+import feature3 from '../public/feature/laniak-feature-3_v1.png';
 
 
 
 export default function Home() {
 
-  
+
 
   return (
     <div>
@@ -31,7 +31,7 @@ export default function Home() {
 
           <div className={`${styles.bannerComps}`}>
             <h1 className="display-4 mb-3">
-              <Image src={banner} width={300} height={300} alt='logo' /><br/><b>Keynote</b>
+              <Image src={banner} width={300} height={300} alt='logo' /><br /><b>Keynote</b>
             </h1>
             <h3 className="blockquote">
               Learn and evolve through the super cluster of tech-science
@@ -58,7 +58,7 @@ export default function Home() {
               <h4 className={`${styles.featureHeading}`}><b>Easy to Understand.</b></h4>
               <p>Keynotes are created in simplest terms that are easy to quickly understand and absorb. Sharing their own experiene through notes laniak will connect you with developers around the world</p>
             </div>
-            <Image src={feature1} className={`${styles.featureImg} float-end`} alt='feature 1'/>
+            <Image src={feature1} className={`${styles.featureImg} float-end`} alt='feature 1' />
           </div>
 
           <div className={`${styles.featureBox} row`}>
@@ -80,27 +80,25 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="container-fluid px-0">
-        <div className={`${styles.controParent}`}>
-          <div className={`${styles.controBox}`}>
-            <h1 className="mb-5">Total Contributions till now</h1>
-            <div className="container mt-5">
-              <div className="row">
-                <div className="col-4 px-0">
-                  <div className={`${styles.controBall} ${styles.controCount} mx-auto`}><span className="align-middle">123</span></div><br />
-                  <Heart size={16} color='red' fill='red' /><br />
-                  <span className="info">Favourites</span>
-                </div>
-                <div className="col-4 px-0">
-                  <div className={`${styles.controBall} ${styles.controCount} mx-auto`}><span className="align-middle">123</span></div><br />
-                  <Upload size={16} color='skyblue'  /><br />
-                  <span className="info">Uploads</span>
-                </div>
-                <div className="col-4 px-0">
-                  <div className={`${styles.controBall} ${styles.controCount} mx-auto`}><span className="align-middle">123</span></div><br />
-                  <Share2 size={16} color='greenyellow' fill='greenyellow' /><br />
-                  <span className="info ">Recommendations</span>
-                </div>
+      <div className={`${styles.controParent}`}>
+        <div className={`${styles.controBox}`}>
+          <h1 className="mb-5">Total Contributions till now</h1>
+          <div className="container mt-5">
+            <div className="row">
+              <div className="col-sm-12 col-md-12 col-xl-4 px-0 mb-5">
+                <div className={`${styles.controBall} ${styles.controCount} mx-auto`}><span className="align-middle">123</span></div><br />
+                <Heart size={16} color='red' fill='red' /><br />
+                <span className="info">Favourites</span>
+              </div>
+              <div className="col-sm-12 col-md-12 col-xl-4 px-0 mb-5">
+                <div className={`${styles.controBall} ${styles.controCount} mx-auto`}><span className="align-middle">123</span></div><br />
+                <Upload size={16} color='skyblue' /><br />
+                <span className="info">Uploads</span>
+              </div>
+              <div className="col-sm-12 col-md-12 col-xl-4 px-0 mb-5">
+                <div className={`${styles.controBall} ${styles.controCount} mx-auto`}><span className="align-middle">123</span></div><br />
+                <Share2 size={16} color='greenyellow' fill='greenyellow' /><br />
+                <span className="info ">Recommendations</span>
               </div>
             </div>
           </div>
@@ -108,7 +106,7 @@ export default function Home() {
       </div>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-3">
+          <div className="col-sm-6 col-md-6 col-xl-3">
             <ul>
               <li>About Us</li>
               <li>FAQ</li>
@@ -116,14 +114,14 @@ export default function Home() {
               <li>Contact</li>
             </ul>
           </div>
-          <div className="col-3">
+          <div className="col-sm-6 col-md-6 col-xl-3">
             <ul>
               <li>Latest Releases</li>
               <li>Catalog</li>
               <li>Admin</li>
             </ul>
           </div>
-          <div className="col-6 text-center link-sec">
+          <div className="col-sm-12 col-md-12 col-xl-6 text-center link-sec">
             <div className={`${styles.footerLinkSec} mb-2`}>
               View me on
             </div>
