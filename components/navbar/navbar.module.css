@@ -1,11 +1,26 @@
+.navBlock
+{
+
+}
 .navBrand
 {
     background: -webkit-linear-gradient(left , var(--light-highlight-1), var(--light-highlight-2));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
+    margin: 0 1.5rem !important;
 }
 .navTab
 {
     cursor: pointer;
+    margin: 0 1.5rem !important;
+}
+
+@media only screen and (max-width:372px)
+{
+    .navBrand
+    {
+        margin-left: 2px !important;
+        margin-right: 0px !important;
+    }
 }

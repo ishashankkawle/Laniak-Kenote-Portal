@@ -15,12 +15,12 @@ export default function Navbar()
   }
 
     return (
-      <nav className="navbar justify-content-between">
-          <a className={`${styles.navBrand} navbar-brand mx-4`} onClick={() => handleClick("/")}>Keynote</a>
+        <nav className={`${styles.navBlock} navbar justify-content-between`}>
+          <a className={`${styles.navBrand} navbar-brand`} onClick={() => handleClick("/")}>Keynote</a>
           <div className="ms-auto d-flex">
-            <a className={`${styles.navTab} nav-item nav-link nav-btn mx-4`} onClick={() => handleClick("/catalog")}>Catalog</a>
-            <a className={`${styles.navTab} nav-item nav-link nav-btn mx-4`} ><HelpCircle size={16} /></a>
-            <a className={`${styles.navTab} nav-item nav-link nav-btn mx-4`}><Phone size={16} /></a>
+            <a className={`${styles.navTab} nav-item nav-link nav-btn`} onClick={() => handleClick("/catalog")}>Catalog</a>
+            <a className={`${styles.navTab} nav-item nav-link nav-btn`} ><HelpCircle size={16} /></a>
+            <a className={`${styles.navTab} nav-item nav-link nav-btn`}><Phone size={16} /></a>
           </div>
         </nav>
     )
