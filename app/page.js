@@ -4,7 +4,7 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import { Heart, Share2, Upload } from 'react-feather'
 import { useState } from 'react';
-import banner from '../public/logoDesign.png';
+import banner from '../public/keynote-logo.png';
 import feature1 from '../public/feature/laniak-feature-1.png';
 import feature2 from '../public/feature/laniak-feature-2_v1.png';
 import feature3 from '../public/feature/laniak-feature-3_v1.png';
@@ -31,7 +31,7 @@ export default function Home() {
 
           <div className={`${styles.bannerComps}`}>
             <h1 className="display-4 mb-3">
-              <Image src={banner} width={300} height={300} alt='logo' /><br /><b>Keynote</b>
+              <Image src={banner} width={175} height={300} alt='logo' /><br /><b>Keynote</b>
             </h1>
             <h3 className="blockquote">
               Learn and evolve through the super cluster of tech-science
