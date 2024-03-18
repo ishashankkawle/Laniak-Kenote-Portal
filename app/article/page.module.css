@@ -14,5 +14,6 @@
     .articleDisplay
     {
         margin-top: 15%;
+        overflow-x: auto;
     }
 }
