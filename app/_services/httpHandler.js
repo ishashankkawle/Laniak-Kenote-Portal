@@ -8,7 +8,7 @@ function getDefaultMultipartHeaders() {
     return { 'Content-Type': undefined }
 }
 
-async function httpGet(url, customHeaders = this.getDefaultHeaders()) {
+async function httpGet(url, customHeaders = getDefaultHeaders()) {
     let data = axios.get(url, {headers: customHeaders}).then(function (response) {
         return response.data;
     });
@@ -16,14 +16,14 @@ async function httpGet(url, customHeaders = this.getDefaultHeaders()) {
 }
 
 
-async function httpPost(url, reqBody, customHeaders = this.getDefaultHeaders()) {
+async function httpPost(url, reqBody, customHeaders = getDefaultHeaders()) {
     let data = await axios.post(url, reqBody, { headers: customHeaders}).then(function (response) {
         return response.data;
     });
     return data;
 }
 
-async function httpPut(url, reqBody, customHeaders = this.getDefaultHeaders()) {
+async function httpPut(url, reqBody, customHeaders = getDefaultHeaders()) {
     let data = await axios.put(url, reqBody, { headers: customHeaders}).then(function (response) {
         return response.data;
     });

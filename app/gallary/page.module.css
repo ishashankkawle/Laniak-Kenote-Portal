@@ -1,0 +1,35 @@
+.artBannerTitle
+{
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.artCard
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    margin-left:2% !important;
+    margin-right:2% !important;
+    background-color: var(--light-bg-secondary);
+}
+
+.artCard:hover
+{
+    cursor: pointer;
+}
+
+.artBannerImg
+{
+    width: 100%;
+    height: 50%;
+}
+.artCardDescriiption
+{
+    color: var(--light-text-secondary);
+    height: 12px;
+}
+.artCardAuthor
+{
+    color: var(--light-text-ternary);
+}
