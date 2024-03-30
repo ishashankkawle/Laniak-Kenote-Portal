@@ -86,7 +86,7 @@ export default function gallary() {
           <span className={`${styles.artBannerTitle}`}>Latest Articles</span>
         </div>
 
-        <div className="row p-1 justify-content-between mb-5">
+        <div className={`${styles.artList} row p-1 justify-content-between mb-5`}>
           {articleList}
         </div>
 
