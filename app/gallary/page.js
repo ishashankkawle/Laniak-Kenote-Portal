@@ -18,7 +18,7 @@ export default function gallary() {
   let [articleData, setGallary] = useState([])
 
   const initialize = async () => {
-    let url = "https://laniak-keynote-api.azurewebsites.net/gallary"
+    let url = "https://laniak-keynote-api.azurewebsites.net/article/gallary"
     let data = await httpGet(url)
     console.log(data)
     setLoadingFlag(false)
@@ -45,7 +45,7 @@ export default function gallary() {
     let articleList = []
 
     articleList = articleData.map((item) => (
-      <div key={item.name} className={`${styles.artCard} col-sm-6 col-md-4 col-lg-4 ms-auto me-auto d-block shadow`} onClick={() => handleClick("/article?topic=" + encodeURIComponent(item.name))}>
+      <div key={item.name} className={`${styles.artCard} col-sm-6 col-md-4 col-lg-3 ms-auto me-auto d-block shadow`} onClick={() => handleClick("/article?topic=" + encodeURIComponent(item.name))}>
         <div className="row mb-3">
           <img alt={item.name} className={`${styles.artBannerImg}`} src={item.url} priority="false" />
         </div>
