@@ -12,7 +12,7 @@
     margin-left:2% !important;
     margin-right:2% !important;
     background-color: var(--light-bg-secondary);
-    height: 384px;
+    height: 400px;
 }
 
 .artCard:hover
@@ -34,12 +34,20 @@
 {
     color: var(--light-text-ternary);
 }
-
+.artCardAuthorSec
+{
+    width: 50%
+}
+.artCardInsights
+{
+    color: var(--light-text-ternary);
+    width: fit-content;
+}
 @media only screen and (max-width:767px)
 {
     .artCard
     {
-        height: 390px;
+        height: 415px;
     }
     .artList
     {

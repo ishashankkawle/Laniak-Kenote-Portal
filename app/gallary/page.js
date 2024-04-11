@@ -45,7 +45,7 @@ export default function gallary() {
     let articleList = []
 
     articleList = articleData.map((item) => (
-      <div key={item.name} className={`${styles.artCard} col-sm-6 col-md-4 col-lg-3 ms-auto me-auto d-block shadow`} onClick={() => handleClick("/article?topic=" + encodeURIComponent(item.name))}>
+      <div key={item.name} className={`${styles.artCard} col-sm-6 col-md-5 col-lg-3 ms-auto me-auto d-block shadow`} onClick={() => handleClick("/article?id=" + item.id + "&topic=" + encodeURIComponent(item.name))}>
         <div className="row mb-3">
           <img alt={item.name} className={`${styles.artBannerImg}`} src={item.url} priority="false" />
         </div>
@@ -55,25 +55,22 @@ export default function gallary() {
         <div className="row mb-3 text-x-smaller">
           <div className={`${styles.artCardDescriiption} px-2 text-truncate `}>{item.description}</div>
         </div>
+
         <div className="row mb-2 text-x-smaller justify-content-between">
-          <div className="col-sm-12 col-md-4 col-xl-4">
-            <div className={`${styles.artCardAuthor} px-2 text-truncate`}>{item.author}</div>
+          <div className={`${styles.artCardAuthorSec} px-2 text-truncate`}>
+            <div className={`${styles.artCardAuthor} text-truncate`}>{item.author}</div>
+            <div className={`${styles.artCardAuthor} text-truncate`}>{item.dateupdated}</div>
           </div>
-          <div className="col-sm-12 col-md-4 col-xl-4 d-block ">
-            <div className={`${styles.artCardAuthor} px-2 text-truncate  text-end`}>{item.dateupdated}</div>
-          </div>
-          {/* ----------------------------- FUTURE DEVELOPMENT ------------------------------
-          <div className="col-sm-12 col-md-4 col-xl-4">
-            <div className={`${styles.artCardAuthor} px-2 text-truncate float-end d-flex`}>
-              <div className='mx-2'>
-                <Heart size={16} color='red' fill='red' /> <span>{item.likes}</span>
+         
+          <div className={`${styles.artCardAuthorSec} px-2 text-truncate d-flex justify-content-end align-items-center`}>
+              <div className={`${styles.artCardInsights} px-2 text-truncate`}>
+                <Heart size={16} color='red' fill='red' /><span className='px-1'>{item.likes}</span>
               </div>
-              <div className='px-2 border rounded-pill'>
-                <Share2 size={16} />
-              </div> 
-            </div>
+              {/* <div className={`${styles.artCardInsights} px-2 text-truncate`}>
+               <Share2 size={16} color='orange'/>
+              </div> */}
           </div>
-          ----------------------------- FUTURE DEVELOPMENT ------------------------------ */}
+    
         </div>
       </div>
     ))
@@ -86,7 +83,7 @@ export default function gallary() {
           <span className={`${styles.artBannerTitle}`}>Latest Articles</span>
         </div>
 
-        <div className={`${styles.artList} row p-1 justify-content-between mb-5`}>
+        <div className={`${styles.artList} row g-1 p-1 justify-content-between mb-5`}>
           {articleList}
         </div>
 
