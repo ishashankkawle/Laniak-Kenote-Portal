@@ -8,6 +8,7 @@ import { CheckCircle, ChevronDown, Heart, Link } from 'react-feather';
 import { getFullScreenLoader } from '@/components/preloader/preloader';
 import display from '../display/display';
 import { useRouter } from 'next/router';
+import Footer from '../footer/footer';
 
 
 export default function articledisplay({ currentArticleId, currentArticleTopic }) {
@@ -43,8 +44,7 @@ export default function articledisplay({ currentArticleId, currentArticleTopic }
         initialize()
     }, [])
 
-    const copyUrl = async () => 
-    {
+    const copyUrl = async () => {
         navigator.clipboard.writeText(window.location.href)
         setLinkCopyFlag(true)
     }
@@ -67,56 +67,59 @@ export default function articledisplay({ currentArticleId, currentArticleTopic }
     else {
         let copyBtnIcon = ""
 
-        if(isLinkCopied)
-        {
+        if (isLinkCopied) {
             copyBtnIcon = (<CheckCircle size={20} color='limegreen' />)
         }
-        else
-        {
+        else {
             copyBtnIcon = (<Link size={20} color='orange' />)
         }
         return (
-            <div className={`${styles.articleDisplay} ms-1 px-5 py-3`}>
 
-                <div className={`border-bottom p-2 row`}>
-                    <div className={`mx-1 text-smaller text-truncate`}>
-                        <Heart size={16} color='red' fill='red' /><span className='px-2'>{displayValues.likes}</span> &nbsp; / &nbsp; Last updated: <span className='px-2'>{displayValues.dateupdated}</span>
-                    </div>
-                </div>
+            <>
 
-                <div className={`${styles.articleDisplayFile} mt-4`} dangerouslySetInnerHTML={displayValues.content}>
-                </div>
+                <div className={`${styles.articleDisplay} ms-1 px-5 py-3`}>
 
-                <div className={`${styles.articleFooter} row d-flex justify-content-between py-5`}>
-                    <div className="col-sm-12 col-md-10 col-xl-10">
-                        <div className="p-2">
-                            <div className={`${styles.articleFooterAuthorHeader}`}>
-                                - Published by
-                            </div>
-                            <div className={`${styles.articleFooterAuthor}`}>
-                                {displayValues.author}
-                            </div>
-                            <div className={`${styles.articleFooterDate}`}>
-                                {displayValues.date}
-                            </div>
+                    <div className={`border-bottom p-2 row`}>
+                        <div className={`mx-1 text-smaller text-truncate`}>
+                            <Heart size={16} color='red' fill='red' /><span className='px-2'>{displayValues.likes}</span> &nbsp; / &nbsp; Last updated: <span className='px-2'>{displayValues.dateupdated}</span>
                         </div>
                     </div>
-                    <div className={`${styles.articleFooterAction} p-2 col-sm-12 col-md-2 col-xl-2 flex-column`}>
-                        <div className='row'>
-                            <span className={`${styles.articleFooterActionButton} mx-1`} onClick={handleLike}>
-                                <Heart size={20} color='red' fill='red' />
-                            </span>
-                            <span id='knt-copy-btn' className={`${styles.articleFooterActionButton} mx-1`} onClick={copyUrl}>
-                                {copyBtnIcon}
-                            </span>
+
+                    <div className={`${styles.articleDisplayFile} mt-4`} dangerouslySetInnerHTML={displayValues.content}>
+                    </div>
+
+                    <div className={`${styles.articleFooter} row d-flex justify-content-between py-5`}>
+                        <div className="col-sm-12 col-md-10 col-xl-10">
+                            <div className="p-2">
+                                <div className={`${styles.articleFooterAuthorHeader}`}>
+                                    - Published by
+                                </div>
+                                <div className={`${styles.articleFooterAuthor}`}>
+                                    {displayValues.author}
+                                </div>
+                                <div className={`${styles.articleFooterDate}`}>
+                                    {displayValues.date}
+                                </div>
+                            </div>
                         </div>
-                        {/* <div className='row'>
+                        <div className={`${styles.articleFooterAction} p-2 col-sm-12 col-md-2 col-xl-2 flex-column`}>
+                            <div className='row'>
+                                <span className={`${styles.articleFooterActionButton} mx-1`} onClick={handleLike}>
+                                    <Heart size={20} color='red' fill='red' />
+                                </span>
+                                <span id='knt-copy-btn' className={`${styles.articleFooterActionButton} mx-1`} onClick={copyUrl}>
+                                    {copyBtnIcon}
+                                </span>
+                            </div>
+                            {/* <div className='row'>
                             <span className={`${styles.articleFooterPopup} row`}>Link copied !</span>
                         </div> */}
+                        </div>
                     </div>
-                </div>
 
-            </div>
+                </div>
+                <Footer />
+            </>
         )
     }
 }

@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 import { httpGet, httpPost } from '../_services/httpHandler';
 import { getFullScreenLoader } from '@/components/preloader/preloader';
 import Image from 'next/image';
+import Footer from '@/components/footer/footer';
 
 
 
@@ -61,33 +62,36 @@ export default function gallary() {
             <div className={`${styles.artCardAuthor} text-truncate`}>{item.author}</div>
             <div className={`${styles.artCardAuthor} text-truncate`}>{item.dateupdated}</div>
           </div>
-         
+
           <div className={`${styles.artCardAuthorSec} px-2 text-truncate d-flex justify-content-end align-items-center`}>
-              <div className={`${styles.artCardInsights} px-2 text-truncate`}>
-                <Heart size={16} color='red' fill='red' /><span className='px-1'>{item.likes}</span>
-              </div>
-              {/* <div className={`${styles.artCardInsights} px-2 text-truncate`}>
+            <div className={`${styles.artCardInsights} px-2 text-truncate`}>
+              <Heart size={16} color='red' fill='red' /><span className='px-1'>{item.likes}</span>
+            </div>
+            {/* <div className={`${styles.artCardInsights} px-2 text-truncate`}>
                <Share2 size={16} color='orange'/>
               </div> */}
           </div>
-    
+
         </div>
       </div>
     ))
 
 
     return (
-      <div className="container-fluid px-2.5">
+      <>
+        <div className="container-fluid px-2.5">
 
-        <div className="mx-2 mt-2 mb-3">
-          <span className={`${styles.artBannerTitle}`}>Latest Articles</span>
+          <div className="mx-2 mt-2 mb-3">
+            <span className={`${styles.artBannerTitle}`}>Latest Articles</span>
+          </div>
+
+          <div className={`${styles.artList} row g-1 p-1 justify-content-between mb-5`}>
+            {articleList}
+          </div>
+
         </div>
-
-        <div className={`${styles.artList} row g-1 p-1 justify-content-between mb-5`}>
-          {articleList}
-        </div>
-
-      </div>
+        <Footer />
+      </>
     )
   }
 }

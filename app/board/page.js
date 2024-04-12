@@ -9,6 +9,7 @@ import { ChevronDown } from 'react-feather';
 import Filetree from '@/components/filetree/filetree'
 import Display from '@/components/display/display'
 import { getFullScreenLoader } from '@/components/preloader/preloader';
+import Footer from '@/components/footer/footer';
 
 
 export default function board() {
@@ -35,21 +36,20 @@ export default function board() {
     }, [])
 
 
-    if (isLoading) 
-    {
+    if (isLoading) {
         return getFullScreenLoader("Loading")
     }
-    else 
-    {
+    else {
         return (
-            <div className="row h-100">
+                <div className="row h-100">
 
-                <Filetree listdata={data} topic={dir} openPage={openPage} />
+                    <Filetree listdata={data} topic={dir} openPage={openPage} />
 
-                <div className="col-sm-12 col-md-9 col-xl-10 ms-auto float-right">
-                    <Display currentPage={page} />
-                </div>
-            </div >
+                    <div className="col-sm-12 col-md-9 col-xl-10 ms-auto float-right">
+                        <Display currentPage={page} />
+                    </div>
+                </div >
+                
         )
     }
 }

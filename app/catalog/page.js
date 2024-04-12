@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 import { httpGet, httpPost } from '../_services/httpHandler';
 import { getFullScreenLoader } from '@/components/preloader/preloader';
 import Image from 'next/image';
+import Footer from '@/components/footer/footer';
 
 
 
@@ -62,30 +63,33 @@ export default function catalog() {
 
 
     return (
-      <div className="container-fluid px-2.5">
+      <>
+        <div className="container-fluid px-2.5 mb-5">
 
-        <div className="cat-updates-box mx-2 mt-2 mb-3">
-          <span className={`${styles.catBannerTitle}`}>Full Catalog</span>
-        </div>
+          <div className="cat-updates-box mx-2 mt-2 mb-3">
+            <span className={`${styles.catBannerTitle}`}>Full Catalog</span>
+          </div>
 
-        <div className="row p-1 justify-content-between mb-5">
-          {catalogList}
-        </div>
+          <div className="row p-1 justify-content-between mb-5">
+            {catalogList}
+          </div>
 
-        <div className='mx-2 '>
-          We really appriciate your response and contributions in the comunity. Have any corrections or Want to contribute?. Follow the guideline on How to contribute.
-          
-          <div key='How To Contribute' className={`${styles.catCard} col-sm-5 col-md-3 col-lg-3 ms-auto me-auto shadow`} onClick={() => handleClick("/article?topic=How to Contribute")}>
-            <div className="row">
-              <div className="col-3 d-flex align-items-center justify-content-center"><Image alt='How To Contribte' className={`${styles.catFolderLogo}`} src="https://gitlab.com/shashankkawle/DOCS/-/raw/master/_ARTICLES/Assets/How_To_Contribute.png" width={50} height={45} priority={false} /></div>
-              <div className="col-9 content p-4">
-                <div className="text-uppercase text-truncated">How To Contribute</div>
+          <div className='mx-2 '>
+            We really appriciate your response and contributions in the comunity. Have any corrections or Want to contribute?. Follow the guideline on How to contribute.
+
+            <div key='How To Contribute' className={`${styles.catCard} col-sm-5 col-md-3 col-lg-3 ms-auto me-auto shadow`} onClick={() => handleClick("/article?topic=How to Contribute")}>
+              <div className="row">
+                <div className="col-3 d-flex align-items-center justify-content-center"><Image alt='How To Contribte' className={`${styles.catFolderLogo}`} src="https://gitlab.com/shashankkawle/DOCS/-/raw/master/_ARTICLES/Assets/How_To_Contribute.png" width={50} height={45} priority={false} /></div>
+                <div className="col-9 content p-4">
+                  <div className="text-uppercase text-truncated">How To Contribute</div>
+                </div>
               </div>
             </div>
+
           </div>
-          
         </div>
-      </div>
+        <Footer />
+      </>
     )
   }
 }

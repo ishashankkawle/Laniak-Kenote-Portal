@@ -85,7 +85,7 @@
     padding: 6%;
     background: var(--light-text-primary) !important;
     color: var(--light-bg-primary);
-    margin-bottom: 5%;
+    margin-bottom: 3%;
 }
 
 .controBox
@@ -95,13 +95,4 @@
 
 
 
-.footerLinkSec
-{
-    position: relative;
-}
-.footerProfileLink
-{
-    text-decoration: none;
-    color: var(--light-highlight-2);
-    margin: 3%;
-}
+

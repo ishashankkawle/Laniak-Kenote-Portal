@@ -1,0 +1,24 @@
+.footerBlock
+{
+    padding: 6%;
+    background: var(--light-text-primary) !important;
+    color: var(--light-bg-primary);
+}
+.footerLinkSec
+{
+    position: relative;
+}
+.footerLink
+{
+    cursor: pointer;
+}
+.footerLink:hover
+{
+    background-color: var(--light-text-ternary);
+}
+.footerProfileLink
+{
+    text-decoration: none;
+    color: var(--light-highlight-2);
+    margin: 3%;
+}
