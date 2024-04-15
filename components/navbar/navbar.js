@@ -22,7 +22,7 @@ export default function Navbar()
             <a className={`${styles.navTab} ${styles.navTabText} nav-item nav-link nav-btn`} onClick={() => handleClick("/gallary")}>Articles</a>
             <a className={`${styles.navTab} ${styles.navTabIcon} nav-item nav-link nav-btn`} onClick={() => handleClick("/catalog")}><Grid size={16}/></a>
             <a className={`${styles.navTab} ${styles.navTabIcon} nav-item nav-link nav-btn`} onClick={() => handleClick("/gallary")}><FileText size={16}/></a>
-            <a className={`${styles.navTab} nav-item nav-link nav-btn`}><Phone size={16} /></a>
+            {/* <a className={`${styles.navTab} nav-item nav-link nav-btn`}><Phone size={16} /></a> */}
           </div>
         </nav>
     )
