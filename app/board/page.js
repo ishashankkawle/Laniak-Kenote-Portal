@@ -19,7 +19,6 @@ export default function board() {
     let [isLoading, setLoadingFlag] = useState(true)
     let [data, setData] = useState([])
     let [page, openPage] = useState(dir + "/" + decodeURIComponent(query.get('page')));
-    console.log(page)
 
 
     const initialize = async () => {

@@ -17,3 +17,14 @@
         overflow-x: auto;
     }
 }
+.displayActionButton
+{
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--light-text-ternary);
+    border-radius: 50%;
+}

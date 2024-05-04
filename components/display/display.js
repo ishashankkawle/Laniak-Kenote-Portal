@@ -7,6 +7,7 @@ import { getLoader } from '../preloader/preloader'
 import { httpGet } from '@/app/_services/httpHandler'
 import { marked } from 'marked';
 import Footer from '../footer/footer';
+import { Link, Share } from 'react-feather';
 
 
 
@@ -15,7 +16,6 @@ export default function display({ currentPage }) {
 
     let page = currentPage.split("/")
     page = page.slice(-1)[0]
-    console.log(page)
     let [isLoading, setLoadingFlag] = useState(true)
     let [displayValues, setDisplayValues] = useState({ "title": "", "author": "", "date": "", "content": "" })
 
@@ -45,6 +45,11 @@ export default function display({ currentPage }) {
         setLoadingFlag(false)
     }
 
+    const copyUrl = async () => {
+        navigator.clipboard.writeText(window.location.href + "&page=" + encodeURIComponent(currentPage.split("/").slice(1).join("/")))
+    }
+
+    
     if (page != 'null') {
 
         if (isLoading) {
@@ -59,7 +64,11 @@ export default function display({ currentPage }) {
                         </div>
                         <div className={`${styles.displayAuthor}`}>
                             <span>{displayValues.author}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>{displayValues.date}</span>
+                            <span className={`${styles.displayActionButton} mx-3`} onClick={copyUrl}>
+                                <Link size={13} color='orange' />
+                            </span>
                         </div>
+                        
                         <div className={`${styles.displayFile} mt-4`} dangerouslySetInnerHTML={displayValues.content}>
 
                         </div>

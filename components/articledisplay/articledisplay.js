@@ -57,7 +57,6 @@ export default function articledisplay({ currentArticleId, currentArticleTopic }
             ...displayValues,
             "likes": (parseInt(displayValues.likes) + 1).toString()
         }
-        console.log(obj)
         setDisplayValues(obj)
     }
 

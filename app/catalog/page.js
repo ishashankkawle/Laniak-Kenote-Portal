@@ -22,13 +22,11 @@ export default function catalog() {
     let url = "https://gitlab.com/api/v4/projects/8300723/repository/tree?path=_DIR_FILES&recursive=true"
     let headers = { "PRIVATE-TOKEN": "glpat-xG6KXqNybtRAVdhd1pyM" }
     let data = await httpGet(url, headers)
-    console.log(data)
     setLoadingFlag(false)
     setCatalog(data)
   }
 
   useEffect(() => {
-    console.log("isLoading : " + isLoading)
     initialize()
   }, [])
 

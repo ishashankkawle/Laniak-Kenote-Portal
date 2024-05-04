@@ -21,13 +21,11 @@ export default function gallary() {
   const initialize = async () => {
     let url = "https://laniak-keynote-api.azurewebsites.net/article/gallary"
     let data = await httpGet(url)
-    console.log(data)
     setLoadingFlag(false)
     setGallary(data)
   }
 
   useEffect(() => {
-    console.log("isLoading : " + isLoading)
     initialize()
   }, [])
 
