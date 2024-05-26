@@ -19,7 +19,7 @@ export default function gallary() {
   let [articleData, setGallary] = useState([])
 
   const initialize = async () => {
-    let url = "https://laniak-keynote-api.azurewebsites.net/article/gallary"
+    let url = "https://laniak-keynote-api.azurewebsites.net/articles/gallary"
     let data = await httpGet(url)
     data = data.reverse()
     setLoadingFlag(false)

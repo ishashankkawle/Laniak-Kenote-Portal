@@ -21,7 +21,7 @@ export default function articledisplay({ currentArticleId, currentArticleTopic }
 
     const initialize = async () => {
         setLoadingFlag(true)
-        let url = "https://laniak-keynote-api.azurewebsites.net/article/summary?id=" + articleId
+        let url = "https://laniak-keynote-api.azurewebsites.net/articles/summary?id=" + articleId
         let data = await httpGet(url)
         let headers = { "PRIVATE-TOKEN": "glpat-xG6KXqNybtRAVdhd1pyM" }
         url = "https://gitlab.com/api/v4/projects/8300723/repository/files/_ARTICLES%2F" + article + "/raw?ref=master"
@@ -51,7 +51,7 @@ export default function articledisplay({ currentArticleId, currentArticleTopic }
 
     const handleLike = async () => {
         let body = { "id": articleId }
-        let url = "https://laniak-keynote-api.azurewebsites.net/article/likes"
+        let url = "https://laniak-keynote-api.azurewebsites.net/articles/likes"
         httpPut(url, body)
         let obj = {
             ...displayValues,
