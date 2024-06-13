@@ -64,13 +64,20 @@ export default function catalog() {
       <>
         <div className="container-fluid px-2.5 mb-5">
 
-          <div className="cat-updates-box mx-2 mt-2 mb-3">
-            <span className={`${styles.catBannerTitle}`}>Full Catalog</span>
+          {/* ------------------------------ ADVERTISEMENT SECTION------------------------------ */}
+          <div className='text-center '>
           </div>
+          {/* ------------------------------ ADVERTISEMENT SECTION------------------------------ */}
+
+          {/* <div className="cat-updates-box mx-2 mt-2 mb-3">
+            <span className={`${styles.catBannerTitle}`}>Full Catalog</span>
+          </div> */}
 
           <div className="row p-1 justify-content-between mb-5">
             {catalogList}
           </div>
+          
+          
 
           <div className='mx-2 '>
             We really appriciate your response and contributions in the comunity. Have any corrections or Want to contribute?. Follow the guideline on How to contribute.

@@ -21,7 +21,6 @@ export default function gallary() {
   const initialize = async () => {
     let url = "https://laniak-keynote-api.azurewebsites.net/articles/gallary"
     let data = await httpGet(url)
-    data = data.reverse()
     setLoadingFlag(false)
     setGallary(data)
   }
@@ -79,10 +78,14 @@ export default function gallary() {
     return (
       <>
         <div className="container-fluid px-2.5">
-
-          <div className="mx-2 mt-2 mb-3">
+          {/* <div className="mx-2 mt-2 mb-3">
             <span className={`${styles.artBannerTitle}`}>Latest Articles</span>
+          </div> */}
+
+          {/* ------------------------------ ADVERTISEMENT SECTION------------------------------ */}
+          <div className='text-center '>
           </div>
+          {/* ------------------------------ ADVERTISEMENT SECTION------------------------------ */}
 
           <div className={`${styles.artList} row g-1 p-1 justify-content-between mb-5`}>
             {articleList}
