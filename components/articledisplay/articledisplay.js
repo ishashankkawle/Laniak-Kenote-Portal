@@ -9,6 +9,7 @@ import { getFullScreenLoader } from '@/components/preloader/preloader';
 import display from '../display/display';
 import { useRouter } from 'next/router';
 import Footer from '../footer/footer';
+import Script from 'next/script';
 
 
 export default function articledisplay({ currentArticleId, currentArticleTopic }) {
@@ -121,6 +122,11 @@ export default function articledisplay({ currentArticleId, currentArticleTopic }
 
                 {/* ------------------------------ ADVERTISEMENT SECTION------------------------------ */}
                 <div className='col-md-2 col-lg-2 col-xl-2'>
+                    <Script type="text/javascript">
+                        {`aclib.runBanner({
+                            zoneId: '8457126',
+                        });`}
+                    </Script>
                 </div>
                 {/* ------------------------------ ADVERTISEMENT SECTION------------------------------ */}
                 

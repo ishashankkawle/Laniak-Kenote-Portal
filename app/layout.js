@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
         </Script>
 
         {/* ---------------------- ADCASH ----------------------- */}
-        <Script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></Script>
+        <Script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js" strategy="beforeInteractive"></Script>
 
 
         {/* ---------------------- GOOGLE ADSENSE ----------------------- */}
