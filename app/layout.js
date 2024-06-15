@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         {/* ---------------------- ADCASH ----------------------- */}
-        <Script type="text/javascript">
+        <Script id='ad-layout-autobanner' type="text/javascript">
             {`aclib.runAutoTag({
                 zoneId: 'fg9mxlhyfr',
             });`}
