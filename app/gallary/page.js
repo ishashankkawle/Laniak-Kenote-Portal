@@ -85,7 +85,7 @@ export default function gallary() {
 
           {/* ------------------------------ ADVERTISEMENT SECTION------------------------------ */}
           <div className='text-center '>
-            <Script type="text/javascript">
+            <Script id='ad-gallary-topbanner' type="text/javascript">
                 {`aclib.runBanner({
                     zoneId: '8457242',
                 });`}

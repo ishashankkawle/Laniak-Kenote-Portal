@@ -67,7 +67,7 @@ export default function catalog() {
 
           {/* ------------------------------ ADVERTISEMENT SECTION------------------------------ */}
           <div className='text-center '>
-            <Script type="text/javascript">
+            <Script id='ad-catalog-topbanner' type="text/javascript">
                 {`aclib.runBanner({
                     zoneId: '8457242',
                 });`}

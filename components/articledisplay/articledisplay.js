@@ -122,7 +122,7 @@ export default function articledisplay({ currentArticleId, currentArticleTopic }
 
                 {/* ------------------------------ ADVERTISEMENT SECTION------------------------------ */}
                 <div className='col-md-2 col-lg-2 col-xl-2'>
-                    <Script type="text/javascript">
+                    <Script id='ad-articledisplay-sidebanner' type="text/javascript">
                         {`aclib.runBanner({
                             zoneId: '8457126',
                         });`}
