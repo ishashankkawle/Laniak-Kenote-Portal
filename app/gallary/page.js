@@ -9,6 +9,7 @@ import { httpGet, httpPost } from '../_services/httpHandler';
 import { getFullScreenLoader } from '@/components/preloader/preloader';
 import Image from 'next/image';
 import Footer from '@/components/footer/footer';
+import Script from 'next/script';
 
 
 
@@ -84,6 +85,11 @@ export default function gallary() {
 
           {/* ------------------------------ ADVERTISEMENT SECTION------------------------------ */}
           <div className='text-center '>
+            <Script type="text/javascript">
+                {`aclib.runBanner({
+                    zoneId: '8457242',
+                });`}
+            </Script>
           </div>
           {/* ------------------------------ ADVERTISEMENT SECTION------------------------------ */}
 
