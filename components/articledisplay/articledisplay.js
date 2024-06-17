@@ -81,7 +81,7 @@ export default function articledisplay({ currentArticleId, currentArticleTopic }
 
                         <div className={`border-bottom p-2 row`}>
                             <div className={`mx-1 text-smaller text-truncate`}>
-                                <Heart size={16} color='red' fill='red' /><span className='px-2'>{displayValues.likes}</span> &nbsp; / &nbsp; Created : <span className='px-2'>{displayValues.dateupdated}</span>
+                                <Heart size={16} color='red' fill='red' /><span className='px-2'>{displayValues.likes}</span> &nbsp; <span style={{"color" : "var(--light-text-ternary)"}}>|</span> &nbsp; Published : <span className='px-2'>{displayValues.dateupdated}</span>
                             </div>
                         </div>
 
