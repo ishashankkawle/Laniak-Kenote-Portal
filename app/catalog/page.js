@@ -66,13 +66,7 @@ export default function catalog() {
         <div className="container-fluid px-2.5 mb-5">
 
           {/* ------------------------------ ADVERTISEMENT SECTION------------------------------ */}
-          <div className='text-center '>
-            <Script id='ad-catalog-topbanner' type="text/javascript">
-                {`aclib.runBanner({
-                    zoneId: '8457242',
-                });`}
-            </Script>
-          </div>
+          
           {/* ------------------------------ ADVERTISEMENT SECTION------------------------------ */}
 
           {/* <div className="cat-updates-box mx-2 mt-2 mb-3">

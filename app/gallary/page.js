@@ -84,13 +84,7 @@ export default function gallary() {
           </div> */}
 
           {/* ------------------------------ ADVERTISEMENT SECTION------------------------------ */}
-          <div className='text-center '>
-            <Script id='ad-gallary-topbanner' type="text/javascript">
-                {`aclib.runBanner({
-                    zoneId: '8457242',
-                });`}
-            </Script>
-          </div>
+          
           {/* ------------------------------ ADVERTISEMENT SECTION------------------------------ */}
 
           <div className={`${styles.artList} row g-1 p-1 justify-content-between mb-5`}>

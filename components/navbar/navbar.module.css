@@ -1,6 +1,6 @@
 .navBlock
 {
-
+    padding: 0 !important;
 }
 .navBrand
 {
@@ -13,7 +13,13 @@
 .navTab
 {
     cursor: pointer;
-    margin: 0 1.5rem !important;
+    padding: 1.1rem 1.5rem !important;
+}
+.navTab:hover
+{
+    color: var(--light-bg-primary) !important;
+    background-color: var(--light-text-secondary);
+    transition: 0.5s;
 }
 .navTabText
 {
