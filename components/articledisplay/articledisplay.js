@@ -24,9 +24,8 @@ export default function articledisplay({ currentArticleId, currentArticleTopic }
         setLoadingFlag(true)
         let url = "https://laniak-keynote-api.azurewebsites.net/articles/summary?id=" + articleId
         let data = await httpGet(url)
-        let headers = { "PRIVATE-TOKEN": "glpat-xG6KXqNybtRAVdhd1pyM" }
-        url = "https://gitlab.com/api/v4/projects/8300723/repository/files/_ARTICLES%2F" + article + "/raw?ref=master"
-        let dataContent = await httpGet(url, headers)
+        url = "https://laniak-keynote-api.azurewebsites.net/articles/file?path=" + article
+        let dataContent = await httpGet(url)
         let obj = {}
         obj["title"] = article.split("/").slice(-1)[0]
         obj["author"] = data.author

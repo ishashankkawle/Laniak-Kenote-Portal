@@ -45,12 +45,21 @@ export default function Navbar()
     } else {
       themeBtn = <a id='lan-theme-toggle-btn' className={`${styles.navTab} ${styles.navTabText} nav-item nav-link nav-btn`} onClick={() => changeTheme()}><Sun size={20}/></a>
     }
+    
+    let themeBtnSmall = "" 
+    if (isLightTheme) 
+    {
+      themeBtnSmall = <a id='lan-theme-toggle-btn' className={`${styles.navTab} ${styles.navTabIcon} nav-item nav-link nav-btn`} onClick={() => changeTheme()}><Moon size={20}/></a> 
+    } else {
+      themeBtnSmall = <a id='lan-theme-toggle-btn' className={`${styles.navTab} ${styles.navTabIcon} nav-item nav-link nav-btn`} onClick={() => changeTheme()}><Sun size={20}/></a>
+    }
 
     return (
         <nav className={`${styles.navBlock} navbar justify-content-between`}>
           <a className={`${styles.navBrand} navbar-brand`} onClick={() => handleClick("/")}>Keynote</a>
           <div className="ms-auto d-flex">
             {themeBtn}
+            {themeBtnSmall}
             <a className={`${styles.navTab} ${styles.navTabText} nav-item nav-link nav-btn`} onClick={() => handleClick("/catalog")}>Catalog</a>
             <a className={`${styles.navTab} ${styles.navTabText} nav-item nav-link nav-btn`} onClick={() => handleClick("/gallary")}>Articles</a>
             <a className={`${styles.navTab} ${styles.navTabIcon} nav-item nav-link nav-btn`} onClick={() => handleClick("/catalog")}><Grid size={16}/></a>

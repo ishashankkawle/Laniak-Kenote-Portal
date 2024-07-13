@@ -22,9 +22,9 @@ export default function board() {
 
 
     const initialize = async () => {
-        let url = "https://gitlab.com/api/v4/projects/8300723/repository/tree?path=" + dir + "&recursive=true"
-        let headers = { "PRIVATE-TOKEN": "glpat-xG6KXqNybtRAVdhd1pyM" }
-        let data = await httpGet(url, headers)
+        //let url = "https://gitlab.com/api/v4/projects/8300723/repository/tree?path=" + dir + "&recursive=true"
+        let url = "https://laniak-keynote-api.azurewebsites.net/docs/all?path=" + dir
+        let data = await httpGet(url)
         data = data.map((item) => ({ "id": item.id, "name": item.name, "type": item.type, "path": item.path.split("/").slice(1).join("/"), "mode": item.mode }))
         await setData(data)
         setLoadingFlag(false)

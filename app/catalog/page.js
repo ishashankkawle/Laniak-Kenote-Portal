@@ -20,9 +20,9 @@ export default function catalog() {
   let [catalogData, setCatalog] = useState([])
 
   const initialize = async () => {
-    let url = "https://gitlab.com/api/v4/projects/8300723/repository/tree?path=_DIR_FILES&recursive=true"
-    let headers = { "PRIVATE-TOKEN": "glpat-xG6KXqNybtRAVdhd1pyM" }
-    let data = await httpGet(url, headers)
+    //let url = "https://gitlab.com/api/v4/projects/8300723/repository/tree?path=_DIR_FILES&recursive=true"
+    let url = "https://laniak-keynote-api.azurewebsites.net/docs/all?path=_DIR_FILES"
+    let data = await httpGet(url)
     setLoadingFlag(false)
     setCatalog(data)
   }

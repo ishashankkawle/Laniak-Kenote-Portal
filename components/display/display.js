@@ -29,15 +29,16 @@ export default function display({ currentPage }) {
 
     const initialize = async () => {
         setLoadingFlag(true)
-        let headers = { "PRIVATE-TOKEN": "glpat-xG6KXqNybtRAVdhd1pyM" }
-        let url = "https://gitlab.com/api/v4/projects/8300723/repository/files/" + encodeURIComponent(currentPage) + "/blame?ref=master"
-        let data = await httpGet(url, headers)
-        url = "https://gitlab.com/api/v4/projects/8300723/repository/files/" + encodeURIComponent(currentPage) + "/raw?ref=master"
-        let dataContent = await httpGet(url, headers)
+        //let url = "https://gitlab.com/api/v4/projects/8300723/repository/files/" + encodeURIComponent(currentPage) + "/blame?ref=master"
+        let url = "https://laniak-keynote-api.azurewebsites.net/docs/summary?path=" + currentPage
+        let data = await httpGet(url)
+        //url = "https://gitlab.com/api/v4/projects/8300723/repository/files/" + encodeURIComponent(currentPage) + "/raw?ref=master"
+        url = "https://laniak-keynote-api.azurewebsites.net/docs/file?path=" + currentPage
+        let dataContent = await httpGet(url)
         let obj = {}
         obj["title"] = currentPage.split("/").slice(-1)[0]
-        obj["author"] = data[0].commit.author_name
-        let authDate = new Date(data[0].commit.authored_date)
+        obj["author"] = data.commit.author_name
+        let authDate = new Date(data.commit.authored_date)
         obj["date"] = authDate.getFullYear() + "-" + authDate.getMonth() + "-" + authDate.getDate()
         obj["content"] = { __html: marked.parse(dataContent) }
 
