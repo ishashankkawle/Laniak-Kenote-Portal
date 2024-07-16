@@ -30,7 +30,7 @@
     color: var(--light-text-ternary);
     font-weight: lighter;
     stroke-width: 1px;
-    background-color: var(--light-bg-primary);
+    background-color: transparent;
 }
 .fileListToggleBtnRotate{
     transform: rotate(-200deg);

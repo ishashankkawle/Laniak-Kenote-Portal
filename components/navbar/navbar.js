@@ -24,6 +24,7 @@ export default function Navbar()
         document.documentElement.style.setProperty('--light-bg-primary', '#222831');
         document.documentElement.style.setProperty('--light-bg-secondary', '#393E46');
         document.documentElement.style.setProperty('--light-bg-ternary', '#adadadfe');
+        document.documentElement.style.setProperty('--code-color', 'var(--light-highlight-1)');
         setLightTheme(false)
       }
       else
@@ -34,6 +35,7 @@ export default function Navbar()
         document.documentElement.style.setProperty('--light-bg-primary', '#fcfcfc');
         document.documentElement.style.setProperty('--light-bg-secondary', '#fff');
         document.documentElement.style.setProperty('--light-bg-ternary', '#f9f9f9');
+        document.documentElement.style.setProperty('--code-color', 'var(--light-highlight-2)');
         setLightTheme(true)
       }
   }

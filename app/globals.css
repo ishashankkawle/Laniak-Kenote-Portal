@@ -13,6 +13,7 @@
   --light-bg-ternary: #f9f9f9;
   --light-highlight-1: #ea9713;
   --light-highlight-2: #e0329c;
+  --code-color: var(--light-highlight-2)
 }
 
 
@@ -38,8 +39,8 @@ a
 }
 
 code {
-  color: var(--light-highlight-2);
-  background-color: var(--light-bg-ternary);
+  color: var(--code-color);
+  background-color: var(--light-bg-primary);
   border-radius: 0.3rem;
   font-weight: 600;
   white-space: nowrap;
@@ -48,8 +49,9 @@ code {
   border: 0.5px solid var(--light-text-ternary);
 }
 
-pre code {
+pre > code {
   color: var(--light-text-primary) !important;
+  background-color: var(--light-bg-ternary);
   border: none;
   white-space: inherit;
   padding: 0;

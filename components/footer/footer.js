@@ -3,7 +3,7 @@
 
 import { useRouter } from 'next/navigation';
 import styles from './footer.module.css'
-import logo from '../../public/logoDesign.jpeg';
+import logo from '../../public/logoDesign.png';
 import Image from 'next/image'
 
 
