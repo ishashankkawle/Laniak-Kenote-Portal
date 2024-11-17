@@ -9,6 +9,7 @@ import { getFullScreenLoader } from '@/components/preloader/preloader';
 import display from '../display/display';
 import { useRouter } from 'next/router';
 import Footer from '../footer/footer';
+import { marked } from 'marked';
 import Script from 'next/script';
 
 
@@ -34,7 +35,7 @@ export default function articledisplay({ currentArticleId, currentArticleTopic }
         obj["id"] = data.id
         obj["likes"] = data.likes
         obj["email"] = data.authoremail
-        obj["content"] = { __html: dataContent }
+        obj["content"] = { __html: marked.parse(dataContent) }
 
         setDisplayValues(obj)
         setLoadingFlag(false)
