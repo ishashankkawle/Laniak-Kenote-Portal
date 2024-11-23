@@ -8,8 +8,8 @@
   --light-text-primary: #222831;
   --light-text-secondary: #393E46;
   --light-text-ternary: #adadadfe;
-  --light-bg-primary: #fcfcfc;
-  --light-bg-secondary: #fff;
+  --light-bg-primary: #fff;
+  --light-bg-secondary: #fcfcfc;
   --light-bg-ternary: #f9f9f9;
   --light-highlight-1: #ea9713;
   --light-highlight-2: #e0329c;
@@ -28,7 +28,7 @@ body {
   width: 100%;
   height: 100%;
   overflow-x: clip;
-  background: var(--light-bg-primary) !important;
+  background: var(--light-bg-secondary) !important;
   color: var(--light-text-primary) !important;
 }
 

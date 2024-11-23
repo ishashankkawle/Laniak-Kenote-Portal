@@ -18,8 +18,8 @@ export default function Navbar()
   let changeTheme = async (e) => {
     if(isLightTheme)
       {
-        document.documentElement.style.setProperty('--light-text-primary', '#fcfcfc');
-        document.documentElement.style.setProperty('--light-text-secondary', '#FFF');
+        document.documentElement.style.setProperty('--light-text-primary', '#fff');
+        document.documentElement.style.setProperty('--light-text-secondary', '#fcfcfc');
         document.documentElement.style.setProperty('--light-text-ternary', '#f9f9f9');
         document.documentElement.style.setProperty('--light-bg-primary', '#222831');
         document.documentElement.style.setProperty('--light-bg-secondary', '#393E46');
@@ -32,8 +32,8 @@ export default function Navbar()
         document.documentElement.style.setProperty('--light-text-primary', '#222831');
         document.documentElement.style.setProperty('--light-text-secondary', '#393E46');
         document.documentElement.style.setProperty('--light-text-ternary', '#adadadfe');
-        document.documentElement.style.setProperty('--light-bg-primary', '#fcfcfc');
-        document.documentElement.style.setProperty('--light-bg-secondary', '#fff');
+        document.documentElement.style.setProperty('--light-bg-primary', '#fff');
+        document.documentElement.style.setProperty('--light-bg-secondary', '#fcfcfc');
         document.documentElement.style.setProperty('--light-bg-ternary', '#f9f9f9');
         document.documentElement.style.setProperty('--code-color', 'var(--light-highlight-2)');
         setLightTheme(true)
@@ -57,12 +57,12 @@ export default function Navbar()
     }
 
     return (
-        <nav className={`${styles.navBlock} navbar justify-content-between`}>
+        <nav className={`${styles.navBlock} navbar justify-content-between shadow-sm`}>
           <a className={`${styles.navBrand} navbar-brand`} onClick={() => handleClick("/")}>Technote</a>
           <div className="ms-auto d-flex">
             {themeBtn}
             {themeBtnSmall}
-            <a className={`${styles.navTab} ${styles.navTabText} nav-item nav-link nav-btn`} onClick={() => handleClick("/catalog")}>Catalog</a>
+            <a className={`${styles.navTab} ${styles.navTabText} nav-item nav-link nav-btn`} onClick={() => handleClick("/catalog")}>Docs</a>
             <a className={`${styles.navTab} ${styles.navTabText} nav-item nav-link nav-btn`} onClick={() => handleClick("/gallary")}>Articles</a>
             <a className={`${styles.navTab} ${styles.navTabIcon} nav-item nav-link nav-btn`} onClick={() => handleClick("/catalog")}><Grid size={16}/></a>
             <a className={`${styles.navTab} ${styles.navTabIcon} nav-item nav-link nav-btn`} onClick={() => handleClick("/gallary")}><FileText size={16}/></a>

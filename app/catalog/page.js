@@ -39,7 +39,7 @@ export default function catalog() {
 
 
   if (isLoading) {
-    return getFullScreenLoader("Getting catalog");
+    return getFullScreenLoader("Getting docs");
   }
   else {
 

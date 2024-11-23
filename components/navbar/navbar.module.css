@@ -1,6 +1,7 @@
 .navBlock
 {
     padding: 0 !important;
+    background-color: var(--light-bg-primary);
 }
 .navBrand
 {
