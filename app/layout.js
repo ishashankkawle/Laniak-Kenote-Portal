@@ -11,10 +11,10 @@ import Script from 'next/script'
 const inter = Poppins({ weight: '500', subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Keynote',
-  description: 'Keynote is the supercluster of technical knowledge created through personal experiences. The aim of keynote is to minimize development effors and deep dive into tech concepts for better understanding.',
+  title: 'Technote',
+  description: 'Technote is the supercluster of technical knowledge created through personal experiences. The aim of keynote is to minimize development effors and deep dive into tech concepts for better understanding.',
   generator: 'Next.js',
-  applicationName: 'Keynote',
+  applicationName: 'Technote',
   keywords: ['Next.js', 'React', 'JavaScript' , 'laniak' , 'keynote' , 'nextjs'],
   authors: [{name: 'Shashank Kawle' , url : 'https://ishashankkawle.github.io/'}],
   creator: 'Shashank Kawle',

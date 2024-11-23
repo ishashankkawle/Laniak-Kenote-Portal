@@ -58,7 +58,7 @@ export default function Navbar()
 
     return (
         <nav className={`${styles.navBlock} navbar justify-content-between`}>
-          <a className={`${styles.navBrand} navbar-brand`} onClick={() => handleClick("/")}>Keynote</a>
+          <a className={`${styles.navBrand} navbar-brand`} onClick={() => handleClick("/")}>Technote</a>
           <div className="ms-auto d-flex">
             {themeBtn}
             {themeBtnSmall}

@@ -1,5 +1,5 @@
 import styles from './preloader.module.css'
-import preloader from '../../public/loader.gif'
+import preloader from '../../public/loader.png'
 import Image from 'next/image'
 
 export function getLoader(message = "") {
