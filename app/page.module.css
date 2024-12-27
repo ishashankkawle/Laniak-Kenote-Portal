@@ -87,12 +87,32 @@
     color: var(--light-bg-primary);
     margin-bottom: 3%;
 }
-
 .controBox
 {
     text-align: center;
 }
-
-
-
-
+.newStorySection
+{
+    background-color: var(--light-highlight-2);
+    color: white;
+    padding-bottom: 3em;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+}
+.newStoryCard
+{
+    border: 0.5px dashed;
+    border-radius: 30px;
+}
+.newStoryBannerImg
+{
+    width: 100%;
+    height: 100%;
+}
+.newStoryText
+{
+    font-size:3em;
+    color: white;
+    opacity: 1;
+}
