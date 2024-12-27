@@ -25,7 +25,7 @@ export default function Footer() {
                     <div className="col-sm-12 col-md-12 col-xl-4 text-center d-flex align-center justify-content-center">
                         <div>
                             <div className='border-bottom my-3'> Useful Links </div>
-                            <div className={`${styles.footerLink} text-smaller my-2`} onClick={() => handleClick("/catalog")}>Catalog</div>
+                            <div className={`${styles.footerLink} text-smaller my-2`} onClick={() => handleClick("/catalog")}>Docs</div>
                             <div className={`${styles.footerLink} text-smaller my-2`} onClick={() => handleClick("/gallary")}>Articles</div>
                         </div>
                     </div>

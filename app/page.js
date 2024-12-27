@@ -5,8 +5,6 @@ import styles from './page.module.css'
 import { Heart, Share2, Star, Upload } from 'react-feather'
 import { useState, useEffect } from 'react';
 import banner from '../public/keynote-logo.png';
-import wave from '../public/wave.png'
-import wave2 from '../public/wave-2.png'
 import feature1 from '../public/feature/laniak-feature-1.png';
 import feature2 from '../public/feature/laniak-feature-2_v1.png';
 import feature3 from '../public/feature/laniak-feature-3_v1.png';
