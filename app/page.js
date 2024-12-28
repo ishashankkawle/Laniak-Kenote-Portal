@@ -6,8 +6,8 @@ import { Heart, Share2, Star, Upload } from 'react-feather'
 import { useState, useEffect } from 'react';
 import banner from '../public/keynote-logo.png';
 import feature1 from '../public/feature/laniak-feature-1.png';
-import feature2 from '../public/feature/laniak-feature-2_v1.png';
-import feature3 from '../public/feature/laniak-feature-3_v1.png';
+import feature2 from '../public/feature/laniak-feature-2_v2.png';
+import feature3 from '../public/feature/laniak-feature-3_v2.png';
 import logo from '../public/logoDesign.png';
 import Footer from '@/components/footer/footer';
 import { httpGet } from './_services/httpHandler';
@@ -137,16 +137,16 @@ export default function Home() {
             <span className={`${styles.featureNum} col-2`}>02</span>
             <Image src={feature2} className={`${styles.featureImg}`} alt='feature 2' />
             <div className={`${styles.featureText} col-6 ms-auto`}>
-              <h4 className={`${styles.featureHeading}`}><b>More Productive.</b></h4>
-              <p>Technote opens doors to wide range of developer technologies. Developers around thee world can help through laniak for you to be more productive and make your own legacy application</p>
+              <h4 className={`${styles.featureHeading}`}><b>In Depth Analytics</b></h4>
+              <p>Each technote is created with in depth understanding and learings from respective areas to provide detailed understanding over the subject</p>
             </div>
           </div>
 
           <div className={`${styles.featureBox} row`}>
             <span className={`${styles.featureNum} col-2`}>03</span>
             <div className={`${styles.featureText} col-6`}>
-              <h4 className={`${styles.featureHeading}`}><b>Backed by huge community.</b></h4>
-              <p>Technote thanks to all the developers around the world for putting their efforts in sharing their problems and solving them throuh laniak. This laniak is created for delopers by developers itself</p>
+              <h4 className={`${styles.featureHeading}`}><b>Tailored Contents</b></h4>
+              <p>Technote provides tailored contents generated through challenges faced and resolved by developers to achieve on point documentation for developers</p>
             </div>
             <Image src={feature3} className={`${styles.featureImg} float-end`} alt='feature 3' />
           </div>
