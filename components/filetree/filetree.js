@@ -133,7 +133,7 @@ export default function filetree({ listdata, topic, openPage }) {
 
 
     return (
-        <div className={`${styles.fileListBlock} col-sm-12 col-md-3 col-xl-2 px-2 my-1 z-2 shadow-sm`}>
+        <div className={`${styles.fileListBlock} col-sm-12 col-md-4 col-xl-4 px-2 my-1 z-2 shadow-sm`}>
             <ArrowUpCircle id="pageTreeToggler" size={20} className={`${styles.fileListToggleBtn} mx-2 my-2`} onClick={toggleListDisplay} />
             <div id="pageTree" className='d-block'>
                 <ul className='p-0' style={{'listStyleType' : 'none'}}>

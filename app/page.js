@@ -6,8 +6,8 @@ import { Heart, Share2, Star, Upload } from 'react-feather'
 import { useState, useEffect } from 'react';
 import banner from '../public/keynote-logo.png';
 import feature1 from '../public/feature/laniak-feature-1.png';
-import feature2 from '../public/feature/laniak-feature-2_v2.png';
-import feature3 from '../public/feature/laniak-feature-3_v2.png';
+import feature2 from '../public/feature/laniak-feature-3_v2.png';
+import feature3 from '../public/feature/laniak-feature-2_v2.png';
 import logo from '../public/logoDesign.png';
 import Footer from '@/components/footer/footer';
 import { httpGet } from './_services/httpHandler';
@@ -24,7 +24,7 @@ export default function Home() {
   let itemCard = null;
   let item = undefined
   const rouer = useRouter();
-  
+
 
   const initialize = async () => {
     let url = "https://laniak-keynote-api.azurewebsites.net/articles/gallary"
@@ -89,9 +89,12 @@ export default function Home() {
 
   return (
     <div>
+
+      {/* -------------------------------------------------------
+          MAIN BANNER
+          ------------------------------------------------------- */}
       <div className="container-fluid px-0">
         <div className={`${styles.banner}`}>
-
           <div className={`${styles.bannerComps}`}>
             <h1 className="display-4 mb-3">
               <Image src={banner} width={300} height={300} alt='logo' /><br /><b>Technote</b>
@@ -104,21 +107,27 @@ export default function Home() {
         </div>
       </div>
 
+      {/* -------------------------------------------------------
+          LATEST ARTICLE
+          ------------------------------------------------------- */}
       <div className="container-fluid my-5 p-0">
         <div className={`${styles.newStorySection}`}>
-          <div className={`${styles.newStoryText} row mb-3`}>Tranding Now</div>
+          <div className={`${styles.newStoryText} row mb-3`}>Latest Now</div>
 
           {itemCard}
 
         </div>
       </div>
 
+      {/* -------------------------------------------------------
+        ABOUT TECHNOTE
+        ------------------------------------------------------- */}
       <div className="container-fluid mt-2">
         <div className={`${styles.introHeading} mt-5 mb-5`}>
           <div>
-            <h2>
+            <h1>
               Why Technote?
-            </h2>
+            </h1>
           </div>
         </div>
 
@@ -153,10 +162,6 @@ export default function Home() {
         </div>
       </div>
 
-
-
-
-
       {/* -------------------------------------------------------------
       CONTRO PANEL FUTURE DEVELOPMENT
       ------------------------------------------------------------- */}
@@ -186,6 +191,27 @@ export default function Home() {
       </div> */}
 
 
+      {/* -------------------------------------------------------
+        UPCOMING UPDATES
+        ------------------------------------------------------- */}
+      <div className="container-fluid mt-3 p-0">
+        <div className={`${styles.upcomingUpdateSection}`}>
+          <div className={`${styles.upcomingUpdateText} row mb-3`}>Coming soon</div>
+          <div className='row'>
+            <div className='col-sm-12 col-md-6 col-xl-6 align-self-center'>
+              We're thrilled to announce the upcoming launch of our step-by-step <b>courses</b>, designed specifically for developers like YOU. Whether you're just starting out or looking to level up, these courses will guide you through each stage.
+            </div>
+            <div className='col-sm-12 col-md-6 col-xl-6 d-flex justify-content-center'>
+              <img className={`${styles.upcomingUpdateBanner}`} src='https://cdni.iconscout.com/illustration/premium/thumb/boy-completed-online-course-certificate-illustration-download-in-svg-png-gif-file-formats--training-courses-learning-tutorial-video-education-pack-e-illustrations-4088920.png' />
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* -------------------------------------------------------
+        FOOTER
+        ------------------------------------------------------- */}
       <Footer />
 
 

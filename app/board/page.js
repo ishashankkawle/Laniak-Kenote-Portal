@@ -44,7 +44,7 @@ export default function board() {
 
                     <Filetree listdata={data} topic={dir} openPage={openPage} />
 
-                    <div className="col-sm-12 col-md-9 col-xl-10 ms-auto float-right">
+                    <div className="col-sm-12 col-md-8 col-xl-8 ms-auto float-right">
                         <Display currentPage={page} />
                     </div>
                 </div >

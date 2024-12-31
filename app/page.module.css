@@ -116,3 +116,22 @@
     color: white;
     opacity: 1;
 }
+.upcomingUpdateSection
+{
+    background-color: var(--light-highlight-1);
+    color: white;
+    padding-bottom: 3em;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+}
+.upcomingUpdateText
+{
+    font-size:3em;
+    opacity: 1;
+}
+.upcomingUpdateBanner
+{
+    width: 60%;
+    height: 100%;
+}
