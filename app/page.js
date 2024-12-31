@@ -199,7 +199,7 @@ export default function Home() {
           <div className={`${styles.upcomingUpdateText} row mb-3`}>Coming soon</div>
           <div className='row'>
             <div className='col-sm-12 col-md-6 col-xl-6 align-self-center'>
-              We're thrilled to announce the upcoming launch of our step-by-step <b>courses</b>, designed specifically for developers like YOU. Whether you're just starting out or looking to level up, these courses will guide you through each stage.
+              We are thrilled to announce the upcoming launch of our step-by-step <b>courses</b>, designed specifically for developers like YOU. Whether you are just starting out or looking to level up, these courses will guide you through each stage.
             </div>
             <div className='col-sm-12 col-md-6 col-xl-6 d-flex justify-content-center'>
               <img className={`${styles.upcomingUpdateBanner}`} src='https://cdni.iconscout.com/illustration/premium/thumb/boy-completed-online-course-certificate-illustration-download-in-svg-png-gif-file-formats--training-courses-learning-tutorial-video-education-pack-e-illustrations-4088920.png' />
