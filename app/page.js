@@ -71,7 +71,7 @@ export default function Home() {
         </div>
         <div className='col-sm-12 col-mb-9 col-xl-9'>
           <div className='ps-3 mt-2 mb-2 row'>
-            <h3>{item.name}</h3>
+            <h4>{item.name}</h4>
           </div>
           <div className='ps-3 row'>
             <p>{item.description}</p>
@@ -96,7 +96,7 @@ export default function Home() {
       <div className="container-fluid px-0">
         <div className={`${styles.banner}`}>
           <div className={`${styles.bannerComps}`}>
-            <h1 className="display-4 mb-3">
+            <h1 className="display-3 mb-3">
               <Image src={banner} width={300} height={300} alt='logo' /><br /><b>Technote</b>
             </h1>
             <h3 className="blockquote">
