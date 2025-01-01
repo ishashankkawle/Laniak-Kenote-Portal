@@ -96,8 +96,8 @@ export default function Home() {
       <div className="container-fluid px-0">
         <div className={`${styles.banner}`}>
           <div className={`${styles.bannerComps}`}>
-            <h1 className="display-3 mb-3">
-              <Image src={banner} width={300} height={300} alt='logo' /><br/><b>Technote</b>
+            <h1 className="display-4 mb-3">
+              <Image src={banner} width={300} height={300} alt='logo' /><br /><b>Technote</b>
             </h1>
             <h3 className="blockquote">
               Learn and evolve through the super cluster of tech-science
