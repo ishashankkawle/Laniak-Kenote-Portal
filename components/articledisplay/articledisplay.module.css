@@ -31,7 +31,7 @@
 {
     display: inline-flex;
     justify-content: center !important;
-    align-items: end;
+    align-items: flex-end;
     text-align: end;
 }
 .articleFooterActionButton

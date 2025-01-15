@@ -2,6 +2,7 @@
 
 import { Poppins } from 'next/font/google'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'highlight.js/styles/monokai.css'
 import './globals.css'
 import Navbar from '@/components/navbar/navbar'
 import Script from 'next/script'
@@ -29,6 +30,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         
+        {/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"/> */}
+
+
         {/* ---------------------- GOOGLE ANALYTICS ----------------------- */}
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-X996P6JQCJ" />
         <Script id="google-analytics">
@@ -40,7 +44,7 @@ export default function RootLayout({ children }) {
         </Script>
 
         {/* ---------------------- ADCASH ----------------------- */}
-        <Script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js" strategy="beforeInteractive"></Script>
+        {/* <Script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js" strategy="beforeInteractive"></Script> */}
 
 
         {/* ---------------------- GOOGLE ADSENSE ----------------------- */}

@@ -9,8 +9,11 @@ import { getFullScreenLoader } from '@/components/preloader/preloader';
 import display from '../display/display';
 import { useRouter } from 'next/router';
 import Footer from '../footer/footer';
-import { marked } from 'marked';
+//import { marked } from 'marked';
 import Script from 'next/script';
+import { Marked } from "marked";
+import { markedHighlight } from "marked-highlight";
+import hljs from 'highlight.js';
 
 
 export default function articledisplay({ currentArticleId, currentArticleTopic }) {
@@ -27,6 +30,18 @@ export default function articledisplay({ currentArticleId, currentArticleTopic }
         let data = await httpGet(url)
         url = "https://laniak-keynote-api.azurewebsites.net/articles/file?path=" + article
         let dataContent = await httpGet(url)
+        
+        const marked = new Marked(
+            markedHighlight({
+              emptyLangClass: 'hljs',
+              langPrefix: 'hljs language-',
+              highlight(code, lang, info) {
+                const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+                return hljs.highlight(code, { language }).value;
+              }
+            })
+        );
+
         let obj = {}
         obj["title"] = article.split("/").slice(-1)[0]
         obj["author"] = data.author

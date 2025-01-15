@@ -4,6 +4,7 @@
 import { ArrowDownCircle, ArrowLeftCircle, ArrowUpCircle, CheckCircle, ChevronDown, Circle } from 'react-feather';
 import styles from './filetree.module.css'
 import { useState } from 'react';
+import FiletreeItem from '../filetreeitem/filetreeitem';
 
 export default function filetree({ listdata, topic, openPage }) {
 
@@ -48,7 +49,6 @@ export default function filetree({ listdata, topic, openPage }) {
 
     let openBoard = (event, data) => {
         event.stopPropagation()
-        event.target.classList.add('bg-warning-subtle')
         openPage(topic + "/" + data)
     }
 
@@ -78,7 +78,7 @@ export default function filetree({ listdata, topic, openPage }) {
                 {
                     //console.log("pushing LI path : " + item.path)
                     return (<li key={item.path} value={item.path} onClick={(e) => { openBoard(e, item.path) }} className={`${styles.fileListItem} d-none my-2 py-2`}>
-                        {item.name}
+                        <FiletreeItem itemText={item.name}/>
                     </li>)
                 }
             }
@@ -113,7 +113,7 @@ export default function filetree({ listdata, topic, openPage }) {
                 }
                 else {
                     node = (<li key={item.path} value={item.path} onClick={(e) => { openBoard(e, item.path) }} className={`${styles.fileListItem} my-2 py-2`}>
-                        {item.name}
+                        <FiletreeItem itemText={item.name}/>
                     </li>)
                 }
             }

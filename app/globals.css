@@ -50,7 +50,7 @@ code {
 }
 
 pre > code {
-  color: var(--light-text-primary) !important;
+  /* color: var(--light-text-primary) !important; */
   background-color: var(--light-bg-ternary);
   border: none;
   white-space: inherit;
@@ -58,8 +58,8 @@ pre > code {
 }
 
 pre {
-padding: 3%;
-background-color: var(--light-bg-ternary);
+/* padding: 3%;
+background-color: var(--light-bg-ternary); */
 border-radius: 0.3em;
 overflow-y: hidden;
 }

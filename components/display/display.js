@@ -5,10 +5,13 @@ import { useEffect, useState } from 'react'
 import styles from './display.module.css'
 import { getLoader } from '../preloader/preloader'
 import { httpGet } from '@/app/_services/httpHandler'
-import { marked } from 'marked';
+//import { marked } from 'marked';
 import Footer from '../footer/footer';
 import { Link, Share } from 'react-feather';
 
+import { Marked } from "marked";
+import { markedHighlight } from "marked-highlight";
+import hljs from 'highlight.js';
 
 
 
@@ -35,6 +38,18 @@ export default function display({ currentPage }) {
         //url = "https://gitlab.com/api/v4/projects/8300723/repository/files/" + encodeURIComponent(currentPage) + "/raw?ref=master"
         url = "https://laniak-keynote-api.azurewebsites.net/docs/file?path=" + currentPage
         let dataContent = await httpGet(url)
+
+        const marked = new Marked(
+            markedHighlight({
+              emptyLangClass: 'hljs',
+              langPrefix: 'hljs language-',
+              highlight(code, lang, info) {
+                const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+                return hljs.highlight(code, { language }).value;
+              }
+            })
+        );
+
         let obj = {}
         obj["title"] = currentPage.split("/").slice(-1)[0]
         obj["author"] = data.commit.author_name

@@ -23,7 +23,7 @@ export default function Footer() {
                 <div className="row">
 
 
-                    <div className="col-sm-12 col-md-12 col-xl-4 text-center d-flex align-center justify-content-center">
+                    <div className="col-sm-12 col-md-12 col-xl-4 text-center d-flex align-center justify-content-center mb-3">
                         <div>
                             <div className='border-bottom my-3'> Useful Links </div>
                             {/* <div className={`${styles.footerLink} text-smaller my-2`} onClick={() => handleClick("/catalog")}>Docs</div> */}
@@ -33,7 +33,8 @@ export default function Footer() {
 
                     <div className="col-sm-12 col-md-12 col-xl-4 text-center mb-3 m-auto">
                         <h6> Your support really matters ! </h6>
-                        <a href="https://www.buymeacoffee.com/shashankkaz" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style={{ "height": '60px', "width": '217px' }} /></a>
+                        <a href="https://www.buymeacoffee.com/shashankkaz" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style={{ "height": '32px', "width": '114px' }} /></a><br/>
+                        <iframe src="https://github.com/sponsors/ishashankkawle/button" title="Sponsor ishashankkawle" height="32" width="114" style={{"border": "0", "borderRadius": "6px", "margin" : "10px"}}></iframe>
                     </div>
 
                     <div className="col-sm-12 col-md-12 col-xl-4 text-center m-auto">
@@ -67,7 +68,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className='d-flex justify-content-between text-x-smaller px-3 py-2 border'>
-                <span>Copyright <big><b>&copy;</b></big> 2023 - {year}</span>
+                <span>Copyright <big><b>&copy;</b></big> {year - 1} - {year}</span>
                 <span>Created & Powered by <strong> Shashank Kawle </strong> with <Image src={logo} width={12} height={12} /> Laniak Tech</span>
                 <span>All Rights Reserved</span>
             </div>
