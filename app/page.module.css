@@ -12,7 +12,9 @@
 .introHeading
 {
     text-align: center;
-    color: var(--light-highlight-1);
+    font-size:3em;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
 }
 .featureNum
 {
@@ -93,8 +95,7 @@
 }
 .newStorySection
 {
-    background-color: var(--light-highlight-2);
-    color: white;
+    background-color: var(--light-bg-primary);
     padding-bottom: 3em;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -102,7 +103,6 @@
 }
 .newStoryCard
 {
-    border: 0.5px dashed;
     border-radius: 30px;
 }
 .newStoryBannerImg
@@ -112,22 +112,22 @@
 }
 .newStoryText
 {
-    font-size:2rem;
-    color: white;
+    font-size:3em;
+    /* font-family: fantasy; */
     opacity: 1;
 }
 .upcomingUpdateSection
 {
-    background-color: var(--light-highlight-1);
-    color: white;
+    background-color: var(--light-bg-primary);
     padding-bottom: 3em;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1rem;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-top: 3em;
+    border-radius: 20px;
 }
 .upcomingUpdateText
 {
-    font-size:2rem;
+    font-size:3em;
     opacity: 1;
 }
 .upcomingUpdateBanner

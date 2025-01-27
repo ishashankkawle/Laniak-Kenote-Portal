@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import styles from './page.module.css'
-import { Heart, Share2, Star, Upload } from 'react-feather'
+import { Clock, Heart, Share2, Star, Upload } from 'react-feather'
 import { useState, useEffect } from 'react';
 import banner from '../public/keynote-logo.png';
 import feature1 from '../public/feature/laniak-feature-1.png';
@@ -64,23 +64,23 @@ export default function Home() {
     </div>)
   }
   else {
-    itemCard = (<div className={`${styles.newStoryCard} p-5`}>
+    itemCard = (<div className={`${styles.newStoryCard}`}>
       <div className="row">
         <div className='col-sm-12 col-mb-3 col-xl-3'>
           <img alt={item.name} className={`${styles.newStoryBannerImg}`} src={item.url} priority="false" />
         </div>
         <div className='col-sm-12 col-mb-9 col-xl-9'>
           <div className='ps-3 mt-2 mb-2 row'>
-            <h4>{item.name}</h4>
+            <h3>{item.name}</h3>
           </div>
           <div className='ps-3 row'>
             <p>{item.description}</p>
           </div>
-          <div className='ps-3 row mb-3'>
-            <small>- {item.author}</small>
+          <div className='ps-3 row mb-3 text-secondary'>
+            <small>- {item.author} &nbsp;&nbsp; <Clock size={16} /> {item.datecreated}</small>
           </div>
           <div className='ps-3 row'>
-            <button type="button" class="btn btn-outline-light" onClick={() => handleClick("/article?id=" + item.id + "&topic=" + encodeURIComponent(item.name))}>Read more</button>
+            <button type="button" class="btn btn-outline-primary" onClick={() => handleClick("/article?id=" + item.id + "&topic=" + encodeURIComponent(item.name))}>Read more</button>
           </div>
         </div>
       </div>
@@ -97,7 +97,7 @@ export default function Home() {
         <div className={`${styles.banner}`}>
           <div className={`${styles.bannerComps}`}>
             <h1 className="display-3 mb-3">
-              <Image src={banner} width={300} height={300} alt='logo' /><br /><b>Technote</b>
+              <Image src={banner} width={300} height={300} alt='logo' /><br /><b style={{ "fontSize" : "1em"}}>Technote</b>
             </h1>
             <h3 className="blockquote">
               Learn and evolve through the super cluster of tech-science
@@ -111,7 +111,7 @@ export default function Home() {
           LATEST ARTICLE
           ------------------------------------------------------- */}
       <div className="container-fluid my-5 p-0">
-        <div className={`${styles.newStorySection}`}>
+        <div className={`${styles.newStorySection} shadow`}>
           <div className={`${styles.newStoryText} row mb-3`}>Latest Now</div>
 
           {itemCard}
@@ -123,11 +123,9 @@ export default function Home() {
         ABOUT TECHNOTE
         ------------------------------------------------------- */}
       <div className="container-fluid mt-2">
-        <div className={`${styles.introHeading} mt-5 mb-5`}>
+        <div className={`${styles.introHeading}`}>
           <div>
-            <h1>
               Why Technote?
-            </h1>
           </div>
         </div>
 
@@ -195,7 +193,7 @@ export default function Home() {
         UPCOMING UPDATES
         ------------------------------------------------------- */}
       <div className="container-fluid mt-3 p-0">
-        <div className={`${styles.upcomingUpdateSection}`}>
+        <div className={`${styles.upcomingUpdateSection} m-5 shadow`}>
           <div className={`${styles.upcomingUpdateText} row mb-3`}>Coming soon</div>
           <div className='row'>
             <div className='col-sm-12 col-md-6 col-xl-6 align-self-center'>
