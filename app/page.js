@@ -29,7 +29,6 @@ export default function Home() {
   const initialize = async () => {
     let url = "https://laniak-keynote-api.azurewebsites.net/articles/gallary"
     let data = await httpGet(url)
-    console.log(data)
     setLoadingFlag(false)
     setData(data)
   }
