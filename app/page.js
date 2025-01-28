@@ -112,7 +112,7 @@ export default function Home() {
           ------------------------------------------------------- */}
       <div className="container-fluid my-5 p-0">
         <div className={`${styles.newStorySection} shadow`}>
-          <div className={`${styles.newStoryText} row mb-3`}>Latest Now</div>
+          <div className={`${styles.newStoryText} row mb-3`}><h1>Latest Now</h1></div>
 
           {itemCard}
 
@@ -124,9 +124,9 @@ export default function Home() {
         ------------------------------------------------------- */}
       <div className="container-fluid mt-2">
         <div className={`${styles.introHeading}`}>
-          <div>
+            <h1>
               Why Technote?
-          </div>
+            </h1>
         </div>
 
         <div className="container">
@@ -194,7 +194,7 @@ export default function Home() {
         ------------------------------------------------------- */}
       <div className="container-fluid mt-3 p-0">
         <div className={`${styles.upcomingUpdateSection} m-5 shadow`}>
-          <div className={`${styles.upcomingUpdateText} row mb-3`}>Coming soon</div>
+          <div className={`${styles.upcomingUpdateText} row mb-3`}><h2>Coming soon</h2></div>
           <div className='row'>
             <div className='col-sm-12 col-md-6 col-xl-6 align-self-center'>
               We are thrilled to announce the upcoming launch of our step-by-step <b>courses</b>, designed specifically for developers like YOU. Whether you are just starting out or looking to level up, these courses will guide you through each stage.
